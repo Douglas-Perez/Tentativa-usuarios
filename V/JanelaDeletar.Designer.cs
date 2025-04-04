@@ -81,7 +81,7 @@
             this.btnCancelarAdd.TabIndex = 4;
             this.btnCancelarAdd.Text = "Cancelar";
             this.btnCancelarAdd.UseVisualStyleBackColor = true;
-            this.btnCancelarAdd.Click += new System.EventHandler(this.btnCancelarAdd_Click);
+            this.btnCancelarAdd.Click += new System.EventHandler(this.BtnCancelarAdd_Click);
             // 
             // btnDeletar
             // 
@@ -100,7 +100,7 @@
             this.btnDeletar.TabIndex = 3;
             this.btnDeletar.Text = "Deletar";
             this.btnDeletar.UseVisualStyleBackColor = false;
-            this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
+            this.btnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // panel2
             // 
