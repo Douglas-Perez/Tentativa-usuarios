@@ -35,8 +35,22 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_
 
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
-            var janelaDelet = new JanelaDeletar();
+            var janelaDelet = new JanelaDeletar(_atualizador);
             janelaDelet.Show();
+        }
+
+        private void BtnEditar_Click(object sender, EventArgs e)
+        {
+            var janelaEditar = new JanelaEditar(_atualizador, 1);
+            janelaEditar.Show();
+        }
+
+        private void dataGridPrincipal_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            int idUsuario = Convert.ToInt32(dataGridPrincipal.Rows[e.RowIndex].Cells["id"].Value);
+
+            JanelaEditar formEditar = new JanelaEditar(_atualizador, idUsuario);
+            formEditar.Show();
         }
     }
 }

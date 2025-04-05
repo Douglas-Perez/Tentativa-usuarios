@@ -30,8 +30,9 @@
         {
             this.dataGridPrincipal = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.btnAdicionar = new System.Windows.Forms.Button();
+            this.btnEditar = new System.Windows.Forms.Button();
             this.btnDeletar = new System.Windows.Forms.Button();
+            this.btnAdicionar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridPrincipal)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -51,9 +52,11 @@
             this.dataGridPrincipal.ReadOnly = true;
             this.dataGridPrincipal.Size = new System.Drawing.Size(604, 248);
             this.dataGridPrincipal.TabIndex = 0;
+            this.dataGridPrincipal.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridPrincipal_RowHeaderMouseClick);
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.btnEditar);
             this.panel1.Controls.Add(this.btnDeletar);
             this.panel1.Controls.Add(this.btnAdicionar);
             this.panel1.Controls.Add(this.dataGridPrincipal);
@@ -62,6 +65,27 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 450);
             this.panel1.TabIndex = 1;
+            // 
+            // btnEditar
+            // 
+            this.btnEditar.Location = new System.Drawing.Point(258, 353);
+            this.btnEditar.Name = "btnEditar";
+            this.btnEditar.Size = new System.Drawing.Size(138, 59);
+            this.btnEditar.TabIndex = 3;
+            this.btnEditar.Text = "Editar";
+            this.btnEditar.UseVisualStyleBackColor = true;
+            this.btnEditar.Click += new System.EventHandler(this.BtnEditar_Click);
+            // 
+            // btnDeletar
+            // 
+            this.btnDeletar.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletar.Location = new System.Drawing.Point(564, 353);
+            this.btnDeletar.Name = "btnDeletar";
+            this.btnDeletar.Size = new System.Drawing.Size(138, 59);
+            this.btnDeletar.TabIndex = 2;
+            this.btnDeletar.Text = "Deletar";
+            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // btnAdicionar
             // 
@@ -72,16 +96,6 @@
             this.btnAdicionar.Text = "Adicionar";
             this.btnAdicionar.UseVisualStyleBackColor = true;
             this.btnAdicionar.Click += new System.EventHandler(this.BtnAdicionar_Click);
-            // 
-            // btnDeletar
-            // 
-            this.btnDeletar.Location = new System.Drawing.Point(564, 353);
-            this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(138, 59);
-            this.btnDeletar.TabIndex = 2;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
-            this.btnDeletar.Click += new System.EventHandler(this.BtnDeletar_Click);
             // 
             // JanelaPrincipal
             // 
@@ -105,6 +119,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnAdicionar;
         private System.Windows.Forms.Button btnDeletar;
+        private System.Windows.Forms.Button btnEditar;
     }
 }
 

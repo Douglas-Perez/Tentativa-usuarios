@@ -99,7 +99,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="C\AtualizarLista.cs" />
-    <Compile Include="C\ConsultaDB.cs" />
+    <Compile Include="C\ManipulaDB.cs" />
+    <Compile Include="C\Deletar.cs" />
     <Compile Include="M\BancoDeDados.cs" />
     <Compile Include="M\Usuario.cs" />
     <Compile Include="V\JanelaAdicionar.cs">
@@ -113,6 +114,12 @@
     </Compile>
     <Compile Include="V\JanelaDeletar.Designer.cs">
       <DependentUpon>JanelaDeletar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="V\JanelaEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="V\JanelaEditar.Designer.cs">
+      <DependentUpon>JanelaEditar.cs</DependentUpon>
     </Compile>
     <Compile Include="V\JanelaPrincipal.cs">
       <SubType>Form</SubType>
@@ -136,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="V\JanelaDeletar.resx">
       <DependentUpon>JanelaDeletar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="V\JanelaEditar.resx">
+      <DependentUpon>JanelaEditar.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="V\JanelaPrincipal.resx">
       <DependentUpon>JanelaPrincipal.cs</DependentUpon>

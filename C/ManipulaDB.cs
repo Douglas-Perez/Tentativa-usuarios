@@ -35,7 +35,39 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.C
             {
                 MessageBox.Show("Erro ao adicionar novo usuario\nVerifique se o email é unico", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-                return false;
+            return false;
+        }
+        public bool DeletarUsuario(int id)
+        {
+            DialogResult resultado = MessageBox.Show($"Gostaria de DELETAR o usuario com id{id}?", "Você tem certeza?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+            if (resultado == DialogResult.Yes)
+            {
+                BancoDeDados db = new BancoDeDados();
+                if (db.AcharUsuario(id))
+                {
+                    MessageBox.Show("1");
+                    db.DeletarUsuario(id);
+                    return true;
+                }
+                MessageBox.Show("2");
+                MessageBox.Show("Usuario não encontrado", "Erro ao deletar", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+            MessageBox.Show("3");
+            return false;
+        }
+
+        public Usuario GetUsuario(int id)
+        {
+            Usuario usuario = new BancoDeDados().ObterUsuarioPorId(id);
+
+            if (usuario != null)
+            {
+                return usuario;
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

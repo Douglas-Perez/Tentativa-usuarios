@@ -14,9 +14,10 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.V
     public partial class JanelaDeletar: Form
     {
         private readonly AtualizarLista _atualizador;
-        public JanelaDeletar()
+        public JanelaDeletar(AtualizarLista atualizador)
         {
             InitializeComponent();
+            _atualizador = atualizador;
         }
 
         private void BtnCancelarAdd_Click(object sender, EventArgs e)
@@ -27,11 +28,11 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.V
 
         private void BtnDeletar_Click(object sender, EventArgs e)
         {
-            DialogResult resultado = MessageBox.Show($"Gostaria de DELETAR o usuario de id {nudDeletar.Value}", "Você tem certeza?", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
-            if (resultado == DialogResult.Yes)
-            {
-                MessageBox.Show("exclui");
-            } 
+            int id = Convert.ToInt32(nudDeletar.Value);
+            ManipulaDB mDB = new ManipulaDB();
+            if (mDB.DeletarUsuario(id))
+                this.Close();
+            _atualizador.AtualizarGrid();
         }
     }
 }

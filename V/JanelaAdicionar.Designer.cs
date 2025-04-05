@@ -83,6 +83,7 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.btnConfirmarAdd.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnConfirmarAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfirmarAdd.ForeColor = System.Drawing.Color.DarkGreen;
             this.btnConfirmarAdd.Location = new System.Drawing.Point(268, 19);
             this.btnConfirmarAdd.Name = "btnConfirmarAdd";
