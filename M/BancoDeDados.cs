@@ -68,7 +68,7 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.M
 
         public Usuario ObterUsuarioPorId(int id)
         {
-            string sql = "SELECT id, name, email, createdAt FROM users WHERE id = @id LIMIT 1;";
+            string sql = "SELECT id, name, email FROM users WHERE id = @id LIMIT 1;";
 
             try
             {
@@ -89,7 +89,6 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.M
                                     Id = reader.GetInt32("id"),
                                     Name = reader.GetString("name"),
                                     Email = reader.GetString("email"),
-                                    CreatedAt = reader.GetDateTime("createdAt")
                                 };
                             }
                         }

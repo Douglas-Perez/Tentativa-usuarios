@@ -13,7 +13,7 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.C
     {
         public DataTable ObterTodosUsuarios()
         {
-            string sql = "SELECT id, name, email, createdAt FROM users";
+            string sql = "SELECT id, name, email FROM users";
 
             return new BancoDeDados().ExecutarConsultas(sql);
         }

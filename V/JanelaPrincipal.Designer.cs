@@ -52,7 +52,7 @@
             this.dataGridPrincipal.ReadOnly = true;
             this.dataGridPrincipal.Size = new System.Drawing.Size(604, 248);
             this.dataGridPrincipal.TabIndex = 0;
-            this.dataGridPrincipal.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridPrincipal_RowHeaderMouseClick);
+            this.dataGridPrincipal.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridPrincipal_CellDoubleClick);
             // 
             // panel1
             // 

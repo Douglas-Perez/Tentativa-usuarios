@@ -12,6 +12,5 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_.M
         public int Id { get; set; }
         public string Name { get; set; }
         public string Email { get; set; }
-        public DateTime CreatedAt { get; set; }
     }
 }

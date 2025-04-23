@@ -19,6 +19,7 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_
         public JanelaPrincipal()
         {
             InitializeComponent();
+            dataGridPrincipal.RowHeadersVisible = false;
             _atualizador = new AtualizarLista(dataGridPrincipal);
         }
 
@@ -45,7 +46,7 @@ namespace eu_só_queria_ser_feliz__isso_não_foi_uma_piada_
             janelaEditar.Show();
         }
 
-        private void dataGridPrincipal_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        private void dataGridPrincipal_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
             int idUsuario = Convert.ToInt32(dataGridPrincipal.Rows[e.RowIndex].Cells["id"].Value);
 
